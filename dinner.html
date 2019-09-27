@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ひかり　ご夕食</title>
+<link href="mystyles4.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="headerArea">
+<div id="wrapper">
+<img src="images/hikari_logo3.jpg" class="example1">
+<div id="textbox">これは学習用のサイトです。掲載されている内容はすべて架空のものです。</div>  
+
+<!-- メニュー -->
+<ul id="menu">
+<li><a href="index.html">ひかり</a></li>
+<li><a href=""><span class="hyouji">ご夕食</span></a></li>
+<li><a href="">ご昼食</a></li>
+<li><a href="access.html">店舗案内</a></li>
+<li><a href="schedule.html">ご予約</a></li>
+<li><a href="omakase.html">おまかせ</a></li>
+<li><a href="">お知らせ</a></li>
+
+</ul>
+</div>
+
+</div>
+ <hr />
+<div id="contentsArea">  
+  <div id="container">  
+  
+  
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+	var img = $("#slideshow").children("img"), // 画像を取得
+		num = img.length, // 画像の数を数える
+		count = 0, // 現在何枚目を表示しているかのカウンター
+		interval = 2500; // 次の画像に切り替わるまでの時間(1/1000秒)
+	
+	img.eq(0).addClass("show"); // 最初の画像にshowクラス付与
+	
+	setTimeout(slide, interval); // slide関数をタイマーセット
+	
+	function slide() {
+		img.eq(count).removeClass("show"); // 現在表示している画像からshowクラスを取り除く
+		count++; // カウンターを一個進める
+		if(count >= num) {
+			count = 0; // カウンターが画像の数より大きければリセット
+		}
+		img.eq(count).addClass("show"); // 次の画像にshowクラス付与
+		setTimeout(slide, interval); // 再びタイマーセット
+	}
+});
+</script>
+
+<div id="slideshow" class="slideshow">
+	<img src="images/dinner.jpg" alt="" />
+	<img src="images/dinner3.jpg" alt="" />
+    <img src="images/sushi2.jpg" alt="" />
+</div>
+  
+  
+  <div class="box2"> <span class="red">おまかせ</span><br />お一人様　一〇、〇〇〇円（税抜）<br />◎お造り（上）◎おつまみ（上）◎お鮨（十二卷貫位）◎赤出汁◎甘味</p><br />
+  
+  <p><span class="red">おまかせ鮨</span><br />お一人様　四、五〇〇円（税抜）<br />◎お鮨</p>
+</div>
+</div>
+
+  
+<footer><p><span class="grey">©Copyright-</span><span class="white">ひかり</span></p></footer>
+   <!-- <div id="footerArea">©copyright-</div>-->
+
+</body>
+</html>
