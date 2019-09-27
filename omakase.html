@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="mystyles4.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="./jquery.inview.js"></script>
+<title>おまかせ</title>
+</head>
+
+<body>
+<div id="headerArea">
+<div id="wrapper">
+<img src="images/hikari_logo3.jpg" class="example1">
+<div id="textbox">これは学習用のサイトです。掲載されている内容はすべて架空のものです。</div>   
+
+<!-- メニュー -->
+<ul id="menu">
+<li><a href="index.html">ひかり</a></li>
+<li><a href="dinner.html">ご夕食</a></li>
+<li><a href="">ご昼食</a></li>
+<li><a href="access.html">店舗案内</a></li>
+<li><a href="schedule.html">ご予約</a></li>
+<li><a href=""><span class="hyouji">おまかせ</span></a></li>
+<li><a href="">お知らせ</a></li>
+
+</ul>
+</div>
+
+</div>
+ <hr />
+ 
+<div id="contentsArea">
+<div id="main">
+<div id="content">
+<script>
+$(function() {
+	$('.list-mv01').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+		if(isInView){
+			$(this).stop().addClass('mv01');
+		}
+		else{
+			$(this).stop().removeClass('mv01');
+		}
+	});
+});
+</script>
+<h2 class="mod-tit-demo02">おまかせ</h2>
+<ul class="list">
+	<li class="list-mv01"><img src="images/otukuri1.jpg"><span class="title">車海老のしんじょう蒸し</span></li>
+	<li class="list-mv01"><img src="images/otukuri4.jpg"><span class="title">はもの湯引き梅肉添え</span></li>
+	<li class="list-mv01"><img src="images/otukuri3.jpg"><span class="title">サーモンとアワビのマリネ</span></li>
+</ul>
+<ul class="list">
+	<li class="list-mv01"><img src="images/nigiri1.jpg"><span class="title">中トロ</span></li>
+	<li class="list-mv01"><img src="images/nigiri2.jpg"><span class="title">車海老</span></li>
+	<li class="list-mv01"><img src="images/nigiri3.jpg"><span class="title">うに</span></li>
+</ul>
+<ul class="list">
+	<li class="list-mv01"><img src="images/seisyu.jpg"><span class="title">清酒</span></li>
+	<li class="list-mv01"><img src="images/misosiru.jpg"><span class="title">赤出汁</span></li>
+	<li class="list-mv01"><img src="images/amami.jpg"><span class="title">ゆずのゼリー寄せ</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footerArea"><p><span class="grey">©Copyright-</span><span class="white">ひかり</span></p></div> 
+
+<!--<footer><p><span class="grey">©Copyright-</span><span class="white">ひかり</span></p></footer>-->
+</div>  
+
+
+</body>
+</html>
